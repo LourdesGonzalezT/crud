@@ -1,0 +1,44 @@
+[
+    {
+        "name": "MadCool Festival",
+        "date": "6,7,8,9 y 10 de julio",
+        "edition": 15,
+        "venue": "Nuevo recinto de festivales",
+        "address": "calle que me invento, num 20",
+        "city": "Madrid",
+        "webSite": "https://madcoolfestival.es/",
+        "image": "https://madcoolfestival.es/assets/images/poster/MC23-POSTER-27JUN.jpg",
+        "contactName": "Antonio García",
+        "contactPhone": "123456789",
+        "contactEmail": "anto@aaa.es",
+        "observations": "este festi mola"
+    },
+    {
+        "name": "Boombastic Festival",
+        "date": "pendiente",
+        "edition": 20,
+        "venue": "Auditorio Paco",
+        "address": "calle Random, num 20",
+        "city": "Alicante",
+        "webSite": "https://boombasticfestival.com/",
+        "image": "https://i0.wp.com/boombasticfestival.com/wp-content/uploads/2023/06/CARTEL-CANARIAS.png?resize=768%2C960&ssl=1",
+        "contactName": "Antonia Random",
+        "contactPhone": "123456789",
+        "contactEmail": "aaa@aaa.es",
+        "observations": "no podemos faltar"
+    },
+    {
+        "name": "Morriña Fest",
+        "date": "28 de julio",
+        "edition": 3,
+        "venue": "Porto de A Coruña",
+        "address": "calle que me invento, num 20",
+        "city": "A Coruña",
+        "webSite": "https://www.morrinafestival.com/",
+        "image": "https://www.morrinafestival.com/wp-content/uploads/2023/05/1080x1920-nuevos-artistas_2-980x1742.jpg",
+        "contactName": "Alberta Perez",
+        "contactPhone": "123456789",
+        "contactEmail": "alber@aaa.es",
+        "observations": "este festi existe"
+    }
+]
