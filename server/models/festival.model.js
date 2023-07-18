@@ -6,6 +6,10 @@ const festivalSchema = new Schema(
       type: String,
       // required: [true, 'El nombre del festival es obligatorio']
     },
+    music: [{
+      type: Schema.Types.ObjectId,
+      ref: 'musicStyle'
+    }],
     date: {
       type: String,
     },

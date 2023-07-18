@@ -19,7 +19,13 @@ const FestivalsListPage = () => {
             <h1>Todos los festivales</h1>
             <hr />
             <Row>
-                <FestivalsList festivals={festivals} />
+                {
+                    !festivals
+                        ?
+                        <h1>CARGANDO</h1>
+                        :
+                        <FestivalsList festivals={festivals} />
+                }
             </Row>
         </Container >
     )
