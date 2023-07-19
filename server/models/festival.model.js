@@ -6,14 +6,23 @@ const festivalSchema = new Schema(
       type: String,
       // required: [true, 'El nombre del festival es obligatorio']
     },
-    music: [{
-      type: Schema.Types.ObjectId,
-      ref: 'musicStyle',
-      default: []
+    // music: [{
+    //   type: Schema.Types.ObjectId,
+    //   ref: 'musicStyle',
+    //   default: []
+    // }],
+    // artistsInvited: [{
+    //   type: Schema.Types.ObjectId,
+    //   ref: 'artist',
+    //   default: []
+    // }],
+    musicStyle: [{
+      type: Array,
+      enum: ['Rock', 'Blues', 'Flamenco', 'Latin', 'Jazz', 'Pop', 'Electrónica', 'Hip Hop', 'Urban', 'Reggaeton', 'Indie', 'Pop', 'Alternativo', 'Metal', 'Punk', 'Multigénero', 'Fusión', 'World Music'],
+      default: [],
     }],
     artistsInvited: [{
-      type: Schema.Types.ObjectId,
-      ref: 'artist',
+      type: Array,
       default: []
     }],
     date: {

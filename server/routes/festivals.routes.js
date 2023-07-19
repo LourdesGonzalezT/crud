@@ -19,23 +19,23 @@ router.get('/getOneFestival/:festival_id', (req, res, next) => {
         .catch(err => next(err))
 })
 
-router.post('/newFestival', (req, res, next) => {
+router.post('/createFestival', (req, res, next) => {
 
-    const { name, date, edition, venue, address, city, webSite, image, contactName, contactPhone, contactEmail, observations } = req.body
+    const { name, music, artistsInvited, date, edition, venue, address, city, webSite, image, contactName, contactPhone, contactEmail, observations } = req.body
 
     Festival
-        .create({ name, date, edition, venue, address, city, webSite, image, contactName, contactPhone, contactEmail, observations })
+        .create({ name, music, artistsInvited, date, edition, venue, address, city, webSite, image, contactName, contactPhone, contactEmail, observations })
         .then(response => res.json(response))
         .catch(err => next(err))
 })
 
 router.put('/edit/:festival_id', (req, res, next) => {
-    const { name, date, edition, venue, address, city, webSite, image, contactName, contactPhone, contactEmail, observations } = req.body
+    const { name, music, artistsInvited, date, edition, venue, address, city, webSite, image, contactName, contactPhone, contactEmail, observations } = req.body
 
     const { festival_id } = req.params
 
     Festival
-        .findByIdAndUpdate(festival_id, { name, date, edition, venue, address, city, webSite, image, contactName, contactPhone, contactEmail, observations }, { new: true })
+        .findByIdAndUpdate(festival_id, { name, music, artistsInvited, date, edition, venue, address, city, webSite, image, contactName, contactPhone, contactEmail, observations }, { new: true })
         .then(response => res.json(response))
         .catch(err => next(err))
 })
