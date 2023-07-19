@@ -8,7 +8,13 @@ const festivalSchema = new Schema(
     },
     music: [{
       type: Schema.Types.ObjectId,
-      ref: 'musicStyle'
+      ref: 'musicStyle',
+      default: []
+    }],
+    artistsInvited: [{
+      type: Schema.Types.ObjectId,
+      ref: 'artist',
+      default: []
     }],
     date: {
       type: String,
