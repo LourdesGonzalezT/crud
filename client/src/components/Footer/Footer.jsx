@@ -2,7 +2,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <footer>Todos los derechos reservados</footer>
+        <footer>Creado por Lourdes González</footer>
     )
 }
 

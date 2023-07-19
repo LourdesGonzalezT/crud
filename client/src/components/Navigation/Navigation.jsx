@@ -17,6 +17,9 @@ const Navigation = () => {
                         <Nav.Link as="span">
                             <Link to="/listado">Lista de Festivales</Link>
                         </Nav.Link>
+                        <Nav.Link as="span">
+                            <Link to="/crear">Crear Festival</Link>
+                        </Nav.Link>
                         <NavDropdown title="Área personal" id="basic-nav-dropdown">
                             <NavDropdown.Item >
                                 <Link to="/registro">Registro</Link>
