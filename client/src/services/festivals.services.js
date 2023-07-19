@@ -14,6 +14,10 @@ class FestivalService {
     getOneFestival(festival_id) {
         return this.api.get(`/getOneFestival/${festival_id}`)
     }
+
+    createFestival(festivalData) {
+        return this.api.post('/createFestival', festivalData)
+    }
 }
 
 
