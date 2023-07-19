@@ -3,7 +3,7 @@ import { Button, Form, Row, Col } from 'react-bootstrap';
 import festivalsService from '../../services/festivals.services';
 
 
-const NewFestivalForm = () => {
+const NewFestivalForm = ({ closeModal, updateList }) => {
 
     const [festivalData, setFestivalData] = useState({
         name: '',
@@ -33,7 +33,10 @@ const NewFestivalForm = () => {
 
         festivalsService
             .createFestival(festivalData)
-            .then(() => alert('done'))
+            .then(() => {
+                closeModal()
+                updateList()
+            })
             .catch(err => console.log(err))
     }
 
