@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import festivalsService from "../../services/festivals.services"
 import { Container, Row, Col, Button, Image } from "react-bootstrap"
+import Loader from '../../components/Loader/Loader'
 
 const FestivalDetailsPage = () => {
 
@@ -21,7 +22,7 @@ const FestivalDetailsPage = () => {
             {
                 !festival
                     ?
-                    <h1>CARGANDO</h1>
+                    <Loader />
                     :
                     <>
                         <h1>Detalles de {festival.name}</h1>

@@ -1,11 +1,12 @@
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-const Navigation = () => {
+const Navigation = ({ theme }) => {
 
+    const variant = theme === 'light' ? 'dark' : 'light'
 
     return (
-        <Navbar bg="dark" variant="dark" expand="lg" className='mb-5' >
+        <Navbar bg={variant} variant={variant} expand="lg" className='mb-5' >
             <Container>
                 <Navbar.Brand href="#home">FESTIVALES</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

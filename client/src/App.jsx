@@ -6,11 +6,14 @@ import AppRoutes from './routes/AppRoutes';
 
 
 function App() {
+
+  const theme = 'dark'
+
   return (
     <div className="App">
-      <Navigation />
+      <Navigation theme={theme} />
       <AppRoutes />
-      <Footer />
+      <Footer theme={theme} />
     </div>
   );
 }

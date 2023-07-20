@@ -3,6 +3,7 @@ import { Container, Row, Modal, Button } from "react-bootstrap"
 import festivalsService from "../../services/festivals.services"
 import FestivalsList from "../../components/FestivalsList/FestivalsList"
 import NewFestivalForm from "../../components/NewFestivalForm/NewFestivalForm"
+import Loader from "../../components/Loader/Loader"
 
 const FestivalsListPage = () => {
 
@@ -30,7 +31,7 @@ const FestivalsListPage = () => {
                 {
                     !festivals
                         ?
-                        <h1>CARGANDO</h1>
+                        <Loader />
                         :
                         <FestivalsList festivals={festivals} />
                 }
