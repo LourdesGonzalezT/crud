@@ -1,7 +1,11 @@
+import { useContext } from 'react'
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { ThemeContext } from '../../context/theme.context'
 
-const Navigation = ({ theme }) => {
+const Navigation = () => {
+
+    const { theme, switchTheme } = useContext(ThemeContext)
 
     const variant = theme === 'light' ? 'dark' : 'light'
 
@@ -34,6 +38,11 @@ const Navigation = ({ theme }) => {
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
+                    <div className="justify-content-end">
+                        <Navbar.Text onClick={switchTheme}>
+                            {theme === 'dark' ? 'Tema claro' : 'Tema oscuro'}
+                        </Navbar.Text>
+                    </div>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

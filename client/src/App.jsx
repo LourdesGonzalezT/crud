@@ -1,19 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import AppRoutes from './routes/AppRoutes';
-
+import { useContext } from 'react';
+import { ThemeContext } from './context/theme.context';
 
 function App() {
 
-  const theme = 'dark'
+  const { theme } = useContext(ThemeContext)
 
   return (
-    <div className="App">
-      <Navigation theme={theme} />
+    <div className="App" style={{ backgroundColor: theme === 'dark' ? 'black' : 'white' }}>
+      <Navigation />
       <AppRoutes />
-      <Footer theme={theme} />
+      <Footer />
     </div>
   );
 }
