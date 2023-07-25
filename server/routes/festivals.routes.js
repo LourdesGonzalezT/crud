@@ -1,4 +1,4 @@
-const router = require("express").Router();
+const router = require("express").Router()
 
 const Festival = require('./../models/festival.model')
 
