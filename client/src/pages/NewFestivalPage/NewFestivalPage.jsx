@@ -8,7 +8,6 @@ const NewFestivalPage = () => {
             <hr />
             <NewFestivalForm />
         </Container>
-
     )
 }
 
