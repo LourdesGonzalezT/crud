@@ -18,6 +18,7 @@ const FestivalDetailsPage = () => {
     }, [])
 
     return (
+
         <Container>
             {
                 !festival

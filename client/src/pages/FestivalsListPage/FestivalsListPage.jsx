@@ -23,6 +23,7 @@ const FestivalsListPage = () => {
     }
 
     return (
+
         <Container>
             <h1>Todos los festivales</h1>
             <Button variant="dark" size="sm" onClick={() => setShowModal(true)}>Crear nuevo festival</Button>

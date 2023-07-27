@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 const FestivalCard = ({ name, image, _id }) => {
 
     return (
+
         <Card className="mb-3 FestivalCard">
             <Card.Img variant="top" src={image} />
             <Card.Body>

@@ -10,6 +10,7 @@ const Navigation = () => {
     const variant = theme === 'light' ? 'dark' : 'light'
 
     return (
+
         <Navbar bg={variant} variant={variant} expand="lg" className='mb-5' >
             <Container>
                 <Navbar.Brand href="#home">FESTIVALES</Navbar.Brand>

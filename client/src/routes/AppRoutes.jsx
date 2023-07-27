@@ -3,6 +3,7 @@ import FestivalsListPage from "../pages/FestivalsListPage/FestivalsListPage"
 import FestivalDetailsPage from "../pages/FestivalDetailsPage/FestivalDetailsPage"
 import NewFestivalPage from "../pages/NewFestivalPage/NewFestivalPage"
 import SignupPage from "../pages/SignupPage/SignupPage"
+import LoginPage from "../pages/LoginPage/LoginPage"
 
 const AppRoutes = () => {
     return (
@@ -12,7 +13,7 @@ const AppRoutes = () => {
             <Route path="/crear" element={<NewFestivalPage />} />
             <Route path="/detalles/:festival_id" element={<FestivalDetailsPage />} />
             <Route path="/registro" element={<SignupPage />} />
-            <Route path="/iniciar-sesion" element={<h1>LOGIN</h1>} />
+            <Route path="/iniciar-sesion" element={<LoginPage />} />
             <Route path="/perfil" element={<h1>PERFIL</h1>} />
             <Route path="*" element={<h1>404</h1>} />
         </Routes>

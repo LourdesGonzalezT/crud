@@ -41,6 +41,7 @@ const NewFestivalForm = ({ closeModal, updateList }) => {
     }
 
     return (
+
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="name">
                 <Form.Label>Nombre del festival</Form.Label>
