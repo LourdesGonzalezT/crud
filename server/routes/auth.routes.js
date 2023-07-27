@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 const User = require('./../models/User.model')
+const { isAuthenticated } = require("../middlewares/verifyToken.middleware")
 const saltRounds = 10
 
 router.post('/signup', (req, res, next) => {
@@ -85,5 +86,10 @@ router.post('/login', (req, res, next) => {
         .catch(err => next(err));
 })
 
+
+
+router.get('verify', isAuthenticated, (req, res, next) => {
+    console.log('EL USUARIO TIENE UN TOKEN CORRECTO Y SUS DATOS SON, req.payload')
+})
 
 module.exports = router
