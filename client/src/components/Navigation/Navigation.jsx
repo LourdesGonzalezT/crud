@@ -1,13 +1,16 @@
 import { useContext } from 'react'
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { ThemeContext } from '../../context/theme.context'
+import { ThemeContext } from '../../contexts/theme.context'
+import { AuthContext } from '../../contexts/auth.context'
 
 const Navigation = () => {
 
     const { theme, switchTheme } = useContext(ThemeContext)
 
     const variant = theme === 'light' ? 'dark' : 'light'
+
+    const { user } = useContext(AuthContext)
 
     return (
 

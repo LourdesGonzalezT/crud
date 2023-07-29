@@ -5,7 +5,7 @@ import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import AppRoutes from './routes/AppRoutes';
 import { useContext } from 'react';
-import { ThemeContext } from './context/theme.context';
+import { ThemeContext } from './contexts/theme.context';
 
 function App() {
 
