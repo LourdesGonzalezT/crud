@@ -10,7 +10,7 @@ const Navigation = () => {
 
     const variant = theme === 'light' ? 'dark' : 'light'
 
-    const { user } = useContext(AuthContext)
+    const { user, logout } = useContext(AuthContext)
 
     return (
 
@@ -29,18 +29,32 @@ const Navigation = () => {
                         <Nav.Link as="span">
                             <Link to="/crear">Crear Festival</Link>
                         </Nav.Link>
-                        <NavDropdown title="Área personal" id="basic-nav-dropdown">
-                            <NavDropdown.Item >
-                                <Link to="/registro">Registro</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Item >
-                                <Link to="/iniciar-sesion">Inicio Sesión</Link>
-                            </NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item>
-                                <Link to="/registro">Salir</Link>
-                            </NavDropdown.Item>
-                        </NavDropdown>
+
+                        {
+                            user
+                                ?
+                                <>
+                                    <Nav.Link as="span">
+                                        <Link onClick={logout}> Cerrar Sesión</Link>
+                                    </Nav.Link>
+                                    <Nav.Link as="span">
+                                        <Link to="/perfil">¡Hola, {user.username}!</Link>
+                                    </Nav.Link>
+
+                                </>
+                                :
+                                <>
+
+                                    <Nav.Link as="span">
+                                        <Link to="/registro">Registro</Link>
+                                    </Nav.Link>
+                                    <Nav.Link as="span">
+                                        <Link to="/iniciar-sesion">Inicio Sesión</Link>
+                                    </Nav.Link>
+
+                                </>
+                        }
+
                     </Nav>
                     <div className="justify-content-end">
                         <Navbar.Text onClick={switchTheme}>

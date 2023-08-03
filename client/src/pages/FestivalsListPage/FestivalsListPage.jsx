@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import { Container, Row, Modal, Button } from "react-bootstrap"
 import festivalsService from "../../services/festivals.services"
 import FestivalsList from "../../components/FestivalsList/FestivalsList"
 import NewFestivalForm from "../../components/NewFestivalForm/NewFestivalForm"
 import Loader from "../../components/Loader/Loader"
+import { AuthContext } from "../../contexts/auth.context"
 
 const FestivalsListPage = () => {
 
     const [festivals, setFestivals] = useState([])
     const [showModal, setShowModal] = useState(false)
-
+    const { user } = useContext(AuthContext)
 
     useEffect(() => {
         updateList()
@@ -26,7 +27,12 @@ const FestivalsListPage = () => {
 
         <Container>
             <h1>Todos los festivales</h1>
-            <Button variant="dark" size="sm" onClick={() => setShowModal(true)}>Crear nuevo festival</Button>
+
+            {
+                user &&
+                <Button variant="dark" size="sm" onClick={() => setShowModal(true)}>Crear nuevo festival</Button>
+            }
+
             <hr />
             <Row>
                 {
