@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams, Link } from "react-router-dom"
 import festivalsService from "../../services/festivals.services"
-import { Container, Row, Col, Button, Image } from "react-bootstrap"
+import { Container, Row, Col, Button, Image, Form } from "react-bootstrap"
 import Loader from '../../components/Loader/Loader'
 
 const FestivalDetailsPage = () => {
@@ -55,8 +55,28 @@ const FestivalDetailsPage = () => {
                                 </ul>
                                 <hr />
                                 <Link to="/listado">
+                                    <Button as="div" variant="dark">Editar Festival</Button>
+                                </Link>
+                                <Link to="/listado">
+                                    <Button as="div" variant="dark">Eliminar Festival</Button>
+                                </Link>
+                                <Link to="/listado">
                                     <Button as="div" variant="dark">Volver a todos los festivales</Button>
                                 </Link>
+                                <Row>
+                                    <Col>
+                                        <Button className="editFestival" as="span" variant="dark" type="submit">
+                                            <Link to={`/editar-sala/${festival._id}`}>Editar </Link>
+                                        </Button>
+                                    </Col>
+
+                                    {/* <Col>
+                                        <Form onSubmit={handleSubmit}>
+                                            <Button className="deleteVenue" variant="dark" type="submit">Eliminar sala</Button>
+                                        </Form>
+                                    </Col> */}
+                                </Row>
+
                             </Col>
                         </Row>
                     </>
